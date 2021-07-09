@@ -31,7 +31,8 @@ app.use(
     extended: true,
   })
 );
-app.use(methodOverride("_method"))
+app.use(methodOverride("_method"));
+app.use(express.static("public"));
 
 app.use("/campgrounds", campgrounds);
 app.use("/campgrounds/:id/reviews", reviews);
